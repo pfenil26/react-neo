@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+// ef85gqVoyEVuuIgsl1DgBPmfwLVWKiTB8F5wuoV9
+import { Navbar } from './Components/Navbar';
+import { APOD } from './pages/APOD';
+import { NEO } from './pages/NEO';
+import { Routes, Route } from "react-router-dom";
+import { Footer } from './Components/Footer';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Navbar/>
+    <Routes>
+      <Route path="/" element={<APOD />} />
+      <Route path="neo" element={<NEO />} />
+    </Routes>
+    <Footer/>
+    </>
   );
 }
 
 export default App;
+
+
