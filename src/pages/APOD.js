@@ -34,7 +34,8 @@ export const APOD = () => {
       <>
         <h2 className='text-center font-italic'>{apod.title}</h2>
         <h4 className='text-center'>{apod.copyright}</h4>
-        <img src={bgUrl} style={{width:"100%"}}>
+        <img src={bgUrl} alt=
+        "" style={{width:"100%"}}>
           </img>
         <p>{apod.explanation}</p>
       </>
